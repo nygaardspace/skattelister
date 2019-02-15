@@ -1,0 +1,18 @@
+---
+title: "Oppland Fylke"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r pressure, warning=FALSE,message=FALSE,echo=FALSE}
+datatable(oppland, escape = FALSE,extensions = 'Buttons', 
+          options = list(pageLength = 5000,
+    dom = 'Bfrtip',
+    buttons = c('excel', 'pdf', 'print')
+  )
+)
+```
+

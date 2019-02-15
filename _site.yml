@@ -1,0 +1,47 @@
+name: "my-website"
+navbar:
+  title: "Skattelister 2015"
+  type: inverse
+  left:
+    - text: "Fylke oversikt"
+      href: index.html      
+    - text: "Fylker"
+      menu:
+        - text: "Oslo"
+          href: oslo.html
+        - text: "Ostfold"
+          href: ostfold.html
+        - text: "Akershus"
+          href: akershus.html
+        - text: "Hedmark"
+          href: hedmark.html
+        - text: "Oppland"
+          href: oppland.html
+        - text: "Buskerud"
+          href: buskerud.html
+        - text: "Vestfold"
+          href: vestfold.html
+        - text: "Telemark"
+          href: telemark.html
+        - text: "Aust-Agder"
+          href: aust_agder.html
+        - text: "Vest-Agder"
+          href: vest_agder.html
+        - text: "Rogaland"
+          href: rogaland.html
+        - text: "Hordaland"
+          href: hordaland.html
+        - text: "Sogn og Fjordane"
+          href: sogn.html
+        - text: "Møre og Romsdal"
+          href: more.html
+        - text: "Sør-Trøndelag"
+          href: sor_trond.html
+        - text: "Nord-Trøndelag"
+          href: nord_trond.html
+        - text: "Nordland"
+          href: nordland.html
+        - text: "Troms"
+          href: troms.html
+        - text: "Finnmark"
+          href: finnmark.html

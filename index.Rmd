@@ -1,0 +1,33 @@
+---
+title: "TOP100 inntekt / formue per kommune"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r, echo=FALSE}
+alle_kom <- rbind(oslo,akershus,hedmark,oppland,buskerud,vestfold,telemark,aust_agder,vest_agder,rogaland,hordaland,sogn,more,sor_trond,nord_trond,nordland,troms,finnmark)
+kommune_stat <- alle_kom %>% group_by(kommune) %>%       dplyr::summarise(formue_snitt=round(mean(f),0),
+                                                                          inntekt_snitt=round(mean(i),0),
+                                                                          formue_sum=round(sum(f),0),
+                                                                          inntekt_sum=round(sum(i),0))
+
+
+kommune_stat$formue_snitt <- format(kommune_stat$formue_snitt,big.mark=" ")
+kommune_stat$inntekt_snitt <- format(kommune_stat$inntekt_snitt,big.mark=" ")
+kommune_stat$formue_sum <- format(kommune_stat$formue_sum,big.mark=" ")
+kommune_stat$inntekt_sum <- format(kommune_stat$inntekt_sum,big.mark=" ")
+
+```
+
+Total formue: `r paste(format(sum(alle_kom$f),big.mark=" "))`
+<br>
+Total inntekt: `r paste(format(sum(alle_kom$i),big.mark=" "))`
+
+```{r, echo=FALSE}
+library(htmlTable)
+htmlTableWidget(kommune_stat, number_of_entries = c(100,500))
+```
+
